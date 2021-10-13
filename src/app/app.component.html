@@ -1,0 +1,16 @@
+<form [formGroup]="form" (ngSubmit)="onSubmit(textValue.value)">
+  <div>
+    <textarea
+      placeholder="Enter input"
+      rows="10"
+      style="width:100%"
+      #textValue
+      formControlName="graphInput"
+      required
+    ></textarea>
+    <br />
+    <button type="submit">Submit</button>
+  </div>
+</form>
+
+<pre *ngIf="result != ''">Output: {{ result }}</pre>
